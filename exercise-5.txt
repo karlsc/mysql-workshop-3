@@ -1,0 +1,9 @@
+mysql> SELECT Account.email FROM Account
+    -> JOIN AddressBook ON AddressBook.accountId = Account.id
+    -> Where AddressBook.id = 100;
++----------------------------------+
+| email                            |
++----------------------------------+
+| dapibus.quam@interdumligulaeu.ca |
++----------------------------------+
+1 row in set (0.00 sec)
