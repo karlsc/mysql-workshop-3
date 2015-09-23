@@ -1,0 +1,64 @@
+mysql> Select Address.city FROM Address WHERE Address.country LIKE "Canada" OR Address.country LIKE "Austria" OR Address.country LIKE "Isle of Man" OR Address.country LIKE "Ireland" OR Address.country LIKE "Japan";
++----------------+
+| city           |
++----------------+
+| Dubbo          |
+| Ceyhan         |
+| Jackson        |
+| Belfast        |
+| Tauranga       |
+| Rzeszów        |
+| Cartago        |
+| Cagnes-sur-Mer |
+| Ceyhan         |
+| Houston        |
+| Galway         |
+| Pietraroja     |
+| Moulins        |
+| Anápolis       |
+| Assen          |
+| Shimla         |
+| ?slahiye       |
+| Kailua         |
+| Edmundston     |
+| Satara         |
+| Angers         |
+| Siedlce        |
+| Chestermere    |
+| Tirrases       |
+| Zwickau        |
+| Belfast        |
+| Horsham        |
+| Chartres       |
+| Rollegem       |
+| Kraków         |
+| Bremerhaven    |
+| Milena         |
+| Cork           |
+| Bozeman        |
+| Pontevedra     |
+| Bodmin         |
+| Ogbomosho      |
+| Denderbelle    |
+| Baulers        |
+| San Vicente    |
+| Alness         |
+| Springfield    |
+| Abbeville      |
+| San Francisco  |
+| Lasnigo        |
+| Nagaon         |
+| Terneuzen      |
+| Raj Nandgaon   |
+| Meridian       |
+| Mabompr?       |
+| Calmar         |
+| Hamburg        |
+| Quesada        |
+| Pabianice      |
+| Dover          |
+| Vienna         |
+| Berlin         |
+| Hillsboro      |
++----------------+
+58 rows in set (0.00 sec)
