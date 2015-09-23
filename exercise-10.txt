@@ -1,0 +1,91 @@
+mysql> SELECT * FROM Entry WHERE Time(birthday) BETWEEN "20:00:00" AND "21:00:00" AND MONTH(birthday)!=2;
++------+---------------+-------------+------------+---------------------+---------+
+| id   | addressBookId | firstName   | lastName   | birthday            | type    |
++------+---------------+-------------+------------+---------------------+---------+
+|   62 |             6 | Ima         | Manning    | 1989-03-10 20:45:05 | phone   |
+|   77 |            50 | Ivana       | Wong       | 1973-03-30 20:52:45 | phone   |
+|  138 |            66 | Jason       | Medina     | 1956-11-23 20:33:40 | phone   |
+|  168 |            31 | Elijah      | Espinoza   | 1960-03-16 20:03:52 | phone   |
+|  173 |            53 | Malachi     | Hamilton   | 1984-04-24 20:48:15 | phone   |
+|  177 |            39 | Harrison    | English    | 1998-08-22 20:10:21 | phone   |
+|  182 |            52 | Wayne       | Gardner    | 1990-07-14 20:13:17 | phone   |
+|  185 |            65 | Devin       | Bishop     | 1962-01-19 20:45:35 | phone   |
+|  210 |            78 | Hayes       | Johnson    | 1949-03-09 20:39:39 | phone   |
+|  221 |            27 | Macy        | Preston    | 1963-06-22 20:30:09 | phone   |
+|  272 |            52 | Justina     | Frank      | 1985-05-12 20:01:34 | phone   |
+|  279 |            19 | Willa       | Henson     | 1962-11-07 20:08:58 | phone   |
+|  282 |            53 | Elton       | Head       | 1966-10-19 20:26:28 | phone   |
+|  292 |            12 | Ross        | Schroeder  | 1946-10-02 20:51:20 | phone   |
+|  313 |            20 | Joan        | Reese      | 1979-09-24 20:56:56 | phone   |
+|  374 |            38 | Kylynn      | Baxter     | 1950-08-10 20:23:47 | phone   |
+|  405 |            43 | Gage        | Mitchell   | 1964-08-05 20:10:04 | phone   |
+|  408 |            55 | Avye        | Potts      | 1984-10-17 20:03:30 | phone   |
+|  473 |            15 | Lynn        | Saunders   | 1986-12-23 20:11:06 | phone   |
+|  484 |            59 | Fleur       | Guthrie    | 1981-09-24 20:05:13 | phone   |
+|  560 |            14 | Branden     | Fry        | 1952-05-18 20:26:05 | phone   |
+|  583 |            27 | Nathaniel   | Humphrey   | 1978-09-28 20:08:29 | phone   |
+|  604 |            17 | Hanna       | Melendez   | 1955-06-01 20:27:54 | phone   |
+|  643 |            98 | Harrison    | Odom       | 1979-01-29 20:34:48 | phone   |
+|  669 |            68 | Conan       | Mullen     | 1961-09-15 20:37:29 | phone   |
+|  734 |             9 | Gisela      | Mooney     | 1970-03-19 20:11:29 | phone   |
+|  736 |            60 | Fleur       | Lancaster  | 1965-10-28 20:07:12 | phone   |
+|  741 |            19 | Lois        | Roberson   | 2000-03-28 20:50:47 | phone   |
+|  775 |            50 | Reuben      | Henderson  | 1969-06-15 20:00:50 | phone   |
+|  793 |            76 | Aladdin     | Adkins     | 1967-12-22 20:04:23 | phone   |
+|  843 |            31 | Stella      | Puckett    | 1954-07-26 20:41:53 | phone   |
+|  851 |            48 | Kibo        | Alston     | 1949-03-06 20:11:11 | phone   |
+|  892 |            58 | Marsden     | Richardson | 1973-07-07 20:24:30 | phone   |
+|  904 |            79 | Ariana      | Ray        | 1986-11-04 20:53:03 | phone   |
+|  907 |            38 | Kalia       | Wade       | 1955-09-08 20:39:45 | phone   |
+|  933 |            62 | Stacy       | Munoz      | 1964-07-02 20:11:29 | phone   |
+|  941 |            38 | Marah       | Savage     | 1970-05-10 20:01:40 | phone   |
+|  973 |            16 | Declan      | Parks      | 1970-06-23 20:40:03 | phone   |
+|  976 |            82 | Felicia     | Walls      | 1954-01-16 20:05:33 | phone   |
+|  979 |            31 | Idola       | Kelley     | 1984-11-03 20:09:20 | phone   |
+|  982 |            96 | Victoria    | Patel      | 1984-12-01 20:47:31 | phone   |
+| 1025 |            50 | Honorato    | Head       | 1984-12-03 20:15:31 | phone   |
+| 5065 |            55 | Frances     | Brooks     | 1997-08-10 20:23:20 |         |
+| 5072 |            10 | Driscoll    | Jacobson   | 1947-06-03 20:46:38 |         |
+| 5086 |            89 | Abigail     | Roach      | 1998-12-04 20:33:02 |         |
+| 5108 |            96 | Nero        | Johnson    | 1987-03-27 20:25:11 |         |
+| 5112 |            75 | Zenaida     | Mccarty    | 1989-01-01 20:38:34 |         |
+| 5153 |            46 | Madison     | Shepherd   | 1979-03-25 20:39:20 |         |
+| 5159 |            17 | Jordan      | Mayer      | 1981-04-05 20:13:29 |         |
+| 5211 |            80 | Quynn       | Marks      | 1980-12-17 20:06:06 |         |
+| 5237 |            74 | Aquila      | Burt       | 1981-12-09 20:56:31 |         |
+| 5243 |           100 | Blossom     | Franco     | 1998-01-09 20:24:51 |         |
+| 5284 |            13 | Zachary     | Carey      | 1968-07-14 20:34:17 |         |
+| 5294 |            63 | Quintessa   | Schmidt    | 1975-11-09 20:59:02 |         |
+| 5302 |            26 | Rylee       | Perez      | 1952-10-21 20:17:54 |         |
+| 5338 |            94 | Colton      | Browning   | 1946-08-29 20:51:06 |         |
+| 5393 |            64 | Ima         | Kirkland   | 1982-06-18 20:21:35 |         |
+| 5428 |            28 | Tad         | Vaughan    | 1966-08-30 20:32:18 |         |
+| 5429 |            98 | Sylvia      | Santiago   | 1989-12-24 20:09:41 |         |
+| 5437 |            80 | Brynn       | Stein      | 1964-01-03 20:43:48 |         |
+| 5440 |            19 | Jesse       | Russell    | 1948-03-15 20:39:13 |         |
+| 5525 |             1 | Deirdre     | Farley     | 1955-08-30 20:36:57 |         |
+| 5551 |            30 | Stacey      | Allen      | 1957-07-06 20:16:09 |         |
+| 5574 |            57 | Nelle       | Crane      | 1951-05-08 20:49:18 |         |
+| 5581 |             2 | Uriah       | Herring    | 1954-09-25 20:41:09 |         |
+| 5607 |             7 | Summer      | Tate       | 1993-03-04 20:41:20 |         |
+| 5624 |            33 | Matthew     | Rodriguez  | 1982-07-31 20:15:12 |         |
+| 5647 |            38 | Amela       | Bell       | 1946-01-15 20:10:27 |         |
+| 5699 |            68 | Nolan       | Santos     | 1961-01-05 20:06:47 |         |
+| 5701 |             4 | Zane        | Olsen      | 1956-09-14 20:14:51 |         |
+| 5711 |             8 | Charles     | Kirk       | 1986-11-14 20:57:10 |         |
+| 5752 |            26 | Katell      | Tanner     | 1989-05-02 20:58:57 |         |
+| 5775 |           100 | Brent       | Lee        | 1957-03-26 20:14:26 |         |
+| 5810 |            11 | Hillary     | Hebert     | 1988-07-22 20:36:22 |         |
+| 5864 |             7 | Genevieve   | Booth      | 1985-06-21 20:49:03 |         |
+| 5866 |            33 | Connor      | Bruce      | 1954-11-07 20:17:00 |         |
+| 5909 |            38 | Marvin      | Rosario    | 1987-01-12 20:48:41 |         |
+| 5914 |            92 | Aurora      | Santiago   | 1957-05-16 20:23:06 |         |
+| 5953 |            24 | Rhoda       | Mcleod     | 1963-10-02 20:36:17 |         |
+| 5974 |            92 | Marcia      | Simmons    | 1979-06-04 20:12:52 |         |
+| 5977 |            76 | Kyle        | Blake      | 1959-08-13 20:29:11 |         |
+| 6013 |            59 | Baxter      | Oneal      | 1957-09-16 20:59:38 |         |
+| 6014 |            41 | Ivor        | Powers     | 1967-08-12 20:23:54 |         |
+| 6018 |            85 | Briar       | Small      | 1981-01-14 20:58:43 |         |
+| 6020 |            53 | Jayme       | Cleveland  | 1997-11-19 20:21:27 |         |
++------+---------------+-------------+------------+---------------------+---------+
+250 rows in set (0.00 sec)
