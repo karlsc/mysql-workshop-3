@@ -1,0 +1,12 @@
+mysql> SELECT Phone.subtype, COUNT(*) FROM Phone
+    -> JOIN Entry ON Entry.id = Phone.entryId
+    -> WHERE Entry.birthday BETWEEN "1950/11/01" AND "1960/09/30"
+    -> GROUP BY Phone.subtype;
++----------+----------+
+| subtype  | COUNT(*) |
++----------+----------+
+| landline |      169 |
+| cellular |      138 |
+| fax      |      131 |
++----------+----------+
+3 rows in set (0.00 sec)
