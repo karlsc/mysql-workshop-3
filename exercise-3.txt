@@ -1,0 +1,122 @@
+mysql> SELECT COUNT(*), LOWER(country) FROM Address GROUP BY country ORDER BY COUNT(*) DESC;
++----------+----------------------------------------------+
+| COUNT(*) | LOWER(country)                               |
++----------+----------------------------------------------+
+|       90 | mozambique                                   |
+|       80 | saint helena, ascension and tristan da cunha |
+|       75 | thailand                                     |
+|       75 | united states minor outlying islands         |
+|       75 | andorra                                      |
+|       75 | canada                                       |
+|       75 | argentina                                    |
+|       75 | lebanon                                      |
+|       75 | wallis and futuna                            |
+|       75 | curaçao                                      |
+|       70 | ethiopia                                     |
+|       70 | united arab emirates                         |
+|       70 | netherlands                                  |
+|       70 | brazil                                       |
+|       70 | congo, the democratic republic of the        |
+|       70 | dominica                                     |
+|       70 | united kingdom (great britain)               |
+|       70 | sri lanka                                    |
+|       65 | norfolk island                               |
+|       65 | aruba                                        |
+|       65 | venezuela                                    |
+|       65 | lithuania                                    |
+|       65 | cook islands                                 |
+|       65 | french polynesia                             |
+|       65 | liberia                                      |
+|       65 | equatorial guinea                            |
+|       65 | switzerland                                  |
+|       65 | tonga                                        |
+|       65 | mayotte                                      |
+|       65 | slovakia                                     |
+|       65 | cocos (keeling) islands                      |
+|       65 | seychelles                                   |
+|       60 | botswana                                     |
+|       60 | guinea                                       |
+|       60 | grenada                                      |
+|       60 | finland                                      |
+|       60 | senegal                                      |
+|       60 | oman                                         |
+|       60 | ireland                                      |
+|       60 | christmas island                             |
+|       60 | kazakhstan                                   |
+|       60 | guinea-bissau                                |
+|       60 | anguilla                                     |
+|       60 | jordan                                       |
+|       60 | malaysia                                     |
+|       60 | turkey                                       |
+|       60 | syria                                        |
+|       60 | virgin islands, united states                |
+|       60 | saint kitts and nevis                        |
+|       60 | isle of man                                  |
+|       55 | qatar                                        |
+|       55 | tanzania                                     |
+|       55 | india                                        |
+|       55 | belize                                       |
+|       55 | peru                                         |
+|       55 | djibouti                                     |
+|       55 | ukraine                                      |
+|       55 | panama                                       |
+|       55 | lesotho                                      |
+|       55 | saint lucia                                  |
+|       55 | latvia                                       |
+|       55 | cambodia                                     |
+|       55 | åland islands                                |
+|       55 | vanuatu                                      |
+|       55 | turks and caicos islands                     |
+|       55 | belarus                                      |
+|       55 | austria                                      |
+|       55 | palau                                        |
+|       55 | philippines                                  |
+|       55 | congo (brazzaville)                          |
+|       55 | burundi                                      |
+|       55 | mexico                                       |
+|       55 | bouvet island                                |
+|       55 | luxembourg                                   |
+|       55 | kiribati                                     |
+|       55 | san marino                                   |
+|       55 | french southern territories                  |
+|       55 | myanmar                                      |
+|       55 | faroe islands                                |
+|       55 | guernsey                                     |
+|       55 | guatemala                                    |
+|       30 | guadeloupe                                   |
+|       30 | denmark                                      |
+|       30 | sint maarten                                 |
+|       30 | moldova                                      |
+|       30 | paraguay                                     |
+|       30 | bolivia                                      |
+|       30 | togo                                         |
+|       30 | somalia                                      |
+|       30 | portugal                                     |
+|       30 | burkina faso                                 |
+|       30 | viet nam                                     |
+|       30 | malawi                                       |
+|       30 | libya                                        |
+|       30 | romania                                      |
+|       30 | china                                        |
+|       30 | angola                                       |
+|       30 | svalbard and jan mayen islands               |
+|       25 | montenegro                                   |
+|       25 | haiti                                        |
+|       25 | trinidad and tobago                          |
+|       25 | korea, south                                 |
+|       25 | sweden                                       |
+|       25 | palestine, state of                          |
+|       25 | liechtenstein                                |
+|       25 | nauru                                        |
+|       25 | nepal                                        |
+|       25 | hong kong                                    |
+|       25 | samoa                                        |
+|       25 | monaco                                       |
+|       20 | jamaica                                      |
+|       15 | iceland                                      |
+|       15 | saint vincent and the grenadines             |
+|       15 | mauritius                                    |
+|       15 | saudi arabia                                 |
+|       10 | niger                                        |
++----------+----------------------------------------------+
+249 rows in set (0.00 sec)
