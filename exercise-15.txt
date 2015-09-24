@@ -1,0 +1,94 @@
+mysql> ALTER TABLE ElectronicMail ADD COLUMN temp BOOLEAN;
+Query OK, 2300 rows affected (0.14 sec)
+Records: 2300  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE ElectronicMail;
++---------+-----------------------------+------+-----+---------+----------------+
+| Field   | Type                        | Null | Key | Default | Extra          |
++---------+-----------------------------+------+-----+---------+----------------+
+| id      | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| entryId | int(11)                     | YES  |     | NULL    |                |
+| type    | enum('home','work','other') | YES  |     | NULL    |                |
+| content | varchar(255)                | YES  |     | NULL    |                |
+| temp    | tinyint(1)                  | YES  |     | NULL    |                |
++---------+-----------------------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> UPDATE ElectronicMail
+    -> SET temp=1
+    -> WHERE type="work";
+Query OK, 690 rows affected (0.02 sec)
+Rows matched: 690  Changed: 690  Warnings: 0
+
+mysql> UPDATE ElectronicMail
+    -> SET type="work"
+    -> WHERE type="home";
+Query OK, 920 rows affected (0.02 sec)
+Rows matched: 920  Changed: 920  Warnings: 0
+
+mysql> UPDATE ElectronicMail
+    -> SET type="home"
+    -> WHERE temp=1;
+Query OK, 690 rows affected (0.00 sec)
+Rows matched: 690  Changed: 690  Warnings: 0
+
+mysql> ALTER TABLE ElectronicMail DROP COLUMN temp;                                                                                                              
+Query OK, 2300 rows affected (0.03 sec)
+Records: 2300  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM ElectronicMail LIMIT 50;
++----+---------+-------+---------------------------------------------+
+| id | entryId | type  | content                                     |
++----+---------+-------+---------------------------------------------+
+|  1 |    5465 | work  | lorem.fringilla.ornare@dictumplacerat.com   |
+|  2 |    4453 | work  | diam.Duis@magnaetipsum.org                  |
+|  3 |    4949 | work  | sit.amet@loremutaliquam.com                 |
+|  4 |    5942 | work  | massa@semperdui.com                         |
+|  5 |    4973 | work  | Cum.sociis@risusNuncac.ca                   |
+|  6 |    4966 | work  | augue@rutrum.net                            |
+|  7 |    5331 | work  | sit@commodohendrerit.co.uk                  |
+|  8 |    5736 | work  | neque.et@cursus.co.uk                       |
+|  9 |    5116 | work  | ornare.facilisis@arcu.com                   |
+| 10 |    4454 | work  | parturient.montes@ornare.com                |
+| 11 |    5396 | home  | taciti@necimperdietnec.org                  |
+| 12 |    5529 | home  | ipsum@ametrisusDonec.org                    |
+| 13 |    4825 | home  | at.fringilla@eleifend.org                   |
+| 14 |    5496 | home  | ornare.libero@non.edu                       |
+| 15 |    4896 | home  | tempor@eutellus.net                         |
+| 16 |    4311 | home  | sit.amet.ultricies@ligula.ca                |
+| 17 |    4345 | home  | a.auctor@pedeetrisus.edu                    |
+| 18 |    5957 | home  | tristique.senectus@vestibulumMaurismagna.ca |
+| 19 |    5704 | home  | non.enim@etmagnis.org                       |
+| 20 |    4662 | home  | imperdiet.erat@consectetuereuismodest.com   |
+| 21 |    5959 | other | Nullam@aliquet.edu                          |
+| 22 |    4371 | other | justo.Praesent.luctus@vulputate.org         |
+| 23 |    4296 | other | quam.Curabitur.vel@tristiquepharetra.co.uk  |
+| 24 |    4021 | other | iaculis.nec.eleifend@lacus.net              |
+| 25 |    4736 | other | sollicitudin.a@duiCumsociis.net             |
+| 26 |    4944 | other | Mauris.quis@Vestibulumuteros.org            |
+| 27 |    4380 | other | pellentesque.a.facilisis@pharetra.net       |
+| 28 |    4744 | other | et.malesuada.fames@ac.com                   |
+| 29 |    4424 | other | vestibulum@iaculisneceleifend.co.uk         |
+| 30 |    5580 | other | arcu.Curabitur@enimdiamvel.com              |
+| 31 |    5164 | work  | sem.egestas@musProinvel.ca                  |
+| 32 |    5589 | work  | vitae.erat@enim.com                         |
+| 33 |    5795 | work  | Nullam.ut@erategetipsum.ca                  |
+| 34 |    5045 | work  | Praesent.interdum.ligula@lectuspede.edu     |
+| 35 |    5449 | work  | parturient@Nunc.edu                         |
+| 36 |    5792 | work  | mauris@sapien.com                           |
+| 37 |    4550 | work  | dolor.sit@accumsansed.edu                   |
+| 38 |    4927 | work  | pede.Cum.sociis@Mauris.com                  |
+| 39 |    5245 | work  | eu.accumsan.sed@et.org                      |
+| 40 |    4524 | work  | urna.Nullam.lobortis@ornare.org             |
+| 41 |    5854 | home  | odio.sagittis@conguea.edu                   |
+| 42 |    4079 | home  | magnis@Namac.edu                            |
+| 43 |    4661 | home  | odio.Nam.interdum@Vestibulum.net            |
+| 44 |    5456 | home  | turpis@dolor.com                            |
+| 45 |    5068 | home  | semper.tellus@massa.edu                     |
+| 46 |    5286 | home  | erat@Mauris.org                             |
+| 47 |    4159 | home  | parturient.montes@interdumSed.co.uk         |
+| 48 |    4090 | home  | mi.Duis.risus@arcu.net                      |
+| 49 |    4540 | home  | Donec.felis@pedePraesenteu.co.uk            |
+| 50 |    5605 | home  | dignissim.tempor@anequeNullam.org           |
++----+---------+-------+---------------------------------------------+
+50 rows in set (0.00 sec)
