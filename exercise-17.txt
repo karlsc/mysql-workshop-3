@@ -1,0 +1,26 @@
+mysql> SELECT * FROM Address GROUP BY (LENGTH(addressLine1)+LENGTH(city)) LIMIT 20;                                                                              
++-----+---------+-------+------------------------------+--------------+---------------------+------------------+-------------------------+------------+
+| id  | entryId | type  | addressLine1                 | addressLine2 | city                | province         | country                 | postalCode |
++-----+---------+-------+------------------------------+--------------+---------------------+------------------+-------------------------+------------+
+| 488 |    3873 | other | 3267 Eu Road                 | NULL         | Ila                 | Osun             | Micronesia              | 93032-202  |
+|  65 |    2969 | home  | 403 Ut Av.                   | NULL         | Saumur              | Pays de la Loire | Dominica                | 6479       |
+|  73 |    2209 | work  | 7868 Vel St.                 | NULL         | Lienz               | Tir              | Cocos (Keeling) Islands | 71016      |
+|  49 |    3432 | work  | 9850 Ac, St.                 | NULL         | Vienna              | Vienna           | Tuvalu                  | 25-015     |
+|  24 |    2285 | other | 5176 Dui, Ave                | NULL         | Rexton              | NB               | Belize                  | 371058     |
+|  59 |    3525 | other | 526-3404 Mi Rd.              | NULL         | Miraj               | Maharastra       | Seychelles              | S5T 0V5    |
+|   4 |    3722 | home  | 6917 Phasellus Rd.           | NULL         | Uyo                 | AK               | Tokelau                 | 03194      |
+|  21 |    3433 | other | 6043 Sem. Av.                | NULL         | Karacabey           | Bursa            | Bulgaria                | 5883       |
+|  22 |    2086 | other | 262-8232 Etiam St.           | NULL         | Erci?               | Van              | Curaçao                 | 6795       |
+|  40 |    3084 | home  | 342 Et Rd.                   | NULL         | Noisy-le-Grand      | IL               | Togo                    | 74722-056  |
+|   5 |    3304 | home  | 5005 Lorem Rd.               | NULL         | Warrnambool         | VIC              | Philippines             | 20124      |
+|  43 |    3634 | work  | Ap #209-9002 Non, Ave        | NULL         | Konin               | WP               | Gibraltar               | 4087       |
+|  12 |    3575 | work  | 3174 Vulputate Rd.           | NULL         | Port Hope           | ON               | France                  | 61308      |
+|   1 |    2317 | home  | 548-6031 Laoreet St.         | NULL         | Blenheim            | South Island     | Israel                  | 1083EY     |
+|  69 |    2977 | home  | Ap #463-443 Ante Avenue      | NULL         | Berlin              | BE               | Oman                    | 61010      |
+|  15 |    2639 | work  | Ap #969-244 Erat, Avenue     | NULL         | Sydney              | New South Wales  | Solomon Islands         | QS1 2NT    |
+|   3 |    3751 | home  | 535-6203 Egestas. Rd.        | NULL         | Santa Inês          | MA               | Vanuatu                 | 9068       |
+|   6 |    3238 | home  | P.O. Box 408, 9391 Ipsum St. | NULL         | Cork                | Munster          | Puerto Rico             | 60192      |
+|  13 |    2353 | work  | P.O. Box 123, 157 Erat. Av.  | NULL         | Bremen              | Bremen           | Netherlands             | 92501      |
+|  35 |    3133 | home  | 593-394 In Road              | NULL         | Santa Cesarea Terme | Puglia           | Kuwait                  | 93821      |
++-----+---------+-------+------------------------------+--------------+---------------------+------------------+-------------------------+------------+
+20 rows in set (0.01 sec)
