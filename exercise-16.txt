@@ -1,0 +1,16 @@
+mysql> SELECT REPLACE(addressLine1,FLOOR(RAND()*10),FLOOR(RAND()*10)) FROM Address WHERE type="other" AND id BETWEEN 715 AND 800 LIMIT 10;
++---------------------------------------------------------+
+| REPLACE(addressLine1,FLOOR(RAND()*10),FLOOR(RAND()*10)) |
++---------------------------------------------------------+
+| Ap #386-6225 Purus. St.                                 |
+| Ap #793-6513 Lorem St.                                  |
+| P.O. Box 893, 8466 Consectetuer Road                    |
+| 7509 Elit St.                                           |
+| P.O. Box 406, 8112 Eleifend Av.                         |
+| 999 Metus St.                                           |
+| 507-8762 Risus Ave                                      |
+| Ap #390-9021 Montes, Ave                                |
+| Ap #587-8830 Dui. Av.                                   |
+| P.O. Box 653, 376 Vehicula. St.                         |
++---------------------------------------------------------+
+10 rows in set (0.00 sec)
