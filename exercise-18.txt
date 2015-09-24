@@ -1,0 +1,38 @@
+mysql> CREATE TABLE AccountCopy LIKE Account; INSERT AccountCopy SELECT * FROM Account;                                                                    
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 1000 rows affected (0.03 sec)
+Records: 1000  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE AccountCopy;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | YES  |     | NULL    |                |
+| password   | varchar(40)  | YES  |     | NULL    |                |
+| createdOn  | datetime     | YES  |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> UPDATE AccountCopy SET modifiedOn=CURDATE();                                                                                                              
+Query OK, 1000 rows affected (0.01 sec)
+Rows matched: 1000  Changed: 1000  Warnings: 0
+
+mysql> SELECT * FROM AccountCopy LIMIT 10;
++----+-----------------------------------------+-------------+---------------------+---------------------+
+| id | email                                   | password    | createdOn           | modifiedOn          |
++----+-----------------------------------------+-------------+---------------------+---------------------+
+|  1 | Donec.vitae@Phasellusornare.org         | LUW56VCP9SK | 2016-05-16 12:35:09 | 2015-09-24 00:00:00 |
+|  2 | sit.amet.metus@orcilacus.net            | TYV38WIA6MT | 2016-03-21 23:42:37 | 2015-09-24 00:00:00 |
+|  3 | ipsum.Donec@tellus.ca                   | WZE25PPL3KA | 2016-08-16 16:51:27 | 2015-09-24 00:00:00 |
+|  4 | Quisque@Donec.net                       | QWZ62HQU1MH | 2015-04-26 06:43:45 | 2015-09-24 00:00:00 |
+|  5 | in.cursus@sedconsequat.edu              | JTV98CDW5SE | 2015-09-16 08:45:17 | 2015-09-24 00:00:00 |
+|  6 | nulla.vulputate@Nullamscelerisque.co.uk | FIA60YIT5YI | 2016-07-10 23:53:43 | 2015-09-24 00:00:00 |
+|  7 | est.ac@etmalesuadafames.ca              | YJU55KOH1JD | 2015-05-09 01:58:30 | 2015-09-24 00:00:00 |
+|  8 | orci.in@nonnisi.ca                      | AIV91QNQ3TS | 2016-01-02 11:43:38 | 2015-09-24 00:00:00 |
+|  9 | Suspendisse.non@nullavulputatedui.ca    | GBV71MAA0JK | 2015-10-06 09:29:25 | 2015-09-24 00:00:00 |
+| 10 | quam.dignissim.pharetra@sed.co.uk       | LCF77ZRN6CK | 2015-08-20 19:19:48 | 2015-09-24 00:00:00 |
++----+-----------------------------------------+-------------+---------------------+---------------------+
+10 rows in set (0.00 sec)
